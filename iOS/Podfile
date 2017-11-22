@@ -7,14 +7,5 @@ target 'DropTop' do
 
   # Pods for DropTop
 
-  target 'DropTopTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'DropTopUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod 'Firebase/Auth'
 end

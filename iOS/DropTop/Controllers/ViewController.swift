@@ -9,17 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var emailEntry: UITextField!
+    @IBOutlet var passwordEntry: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func loginButton(_ sender: Any) {
+        print("User entered \(emailEntry.text!)")
+        print("User entered \(passwordEntry.text!)")
     }
-
-
+    
 }
 

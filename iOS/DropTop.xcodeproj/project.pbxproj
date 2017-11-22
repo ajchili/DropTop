@@ -14,6 +14,7 @@
 		785F0D801FC5EB530054EDB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */; };
 		785F0D8B1FC5EB540054EDB5 /* DropTopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D8A1FC5EB540054EDB5 /* DropTopTests.swift */; };
 		785F0D961FC5EB540054EDB5 /* DropTopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D951FC5EB540054EDB5 /* DropTopUITests.swift */; };
+		99E5706494A1DDAC974B7FD9 /* Pods_DropTop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC815E82B58D359BBF800267 /* Pods_DropTop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0729EA5ED2196948DD894138 /* Pods-DropTop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropTop.release.xcconfig"; path = "Pods/Target Support Files/Pods-DropTop/Pods-DropTop.release.xcconfig"; sourceTree = "<group>"; };
+		5A03860950A9DF09E9248A4D /* Pods-DropTop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropTop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DropTop/Pods-DropTop.debug.xcconfig"; sourceTree = "<group>"; };
 		785F0D721FC5EB530054EDB5 /* DropTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785F0D751FC5EB530054EDB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		785F0D771FC5EB530054EDB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		785F0D911FC5EB540054EDB5 /* DropTopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropTopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785F0D951FC5EB540054EDB5 /* DropTopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTopUITests.swift; sourceTree = "<group>"; };
 		785F0D971FC5EB540054EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC815E82B58D359BBF800267 /* Pods_DropTop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropTop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99E5706494A1DDAC974B7FD9 /* Pods_DropTop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05FCF4361FC5FEC200CCE64A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				785F0D791FC5EB530054EDB5 /* Main.storyboard */,
+				785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05FCF4371FC5FED700CCE64A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				785F0D771FC5EB530054EDB5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3CD9D1A1DBB3EB52DBC230E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC815E82B58D359BBF800267 /* Pods_DropTop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		785F0D691FC5EB530054EDB5 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				785F0D891FC5EB540054EDB5 /* DropTopTests */,
 				785F0D941FC5EB540054EDB5 /* DropTopUITests */,
 				785F0D731FC5EB530054EDB5 /* Products */,
+				C209D76846D1B4308FB40C29 /* Pods */,
+				3CD9D1A1DBB3EB52DBC230E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +129,10 @@
 		785F0D741FC5EB530054EDB5 /* DropTop */ = {
 			isa = PBXGroup;
 			children = (
+				05FCF4371FC5FED700CCE64A /* Controllers */,
+				05FCF4361FC5FEC200CCE64A /* Views */,
 				785F0D751FC5EB530054EDB5 /* AppDelegate.swift */,
-				785F0D771FC5EB530054EDB5 /* ViewController.swift */,
-				785F0D791FC5EB530054EDB5 /* Main.storyboard */,
 				785F0D7C1FC5EB530054EDB5 /* Assets.xcassets */,
-				785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */,
 				785F0D811FC5EB530054EDB5 /* Info.plist */,
 			);
 			path = DropTop;
@@ -125,6 +156,15 @@
 			path = DropTopUITests;
 			sourceTree = "<group>";
 		};
+		C209D76846D1B4308FB40C29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A03860950A9DF09E9248A4D /* Pods-DropTop.debug.xcconfig */,
+				0729EA5ED2196948DD894138 /* Pods-DropTop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 785F0D9A1FC5EB540054EDB5 /* Build configuration list for PBXNativeTarget "DropTop" */;
 			buildPhases = (
+				B1C82AAB73D7EEC8E1EEBD31 /* [CP] Check Pods Manifest.lock */,
 				785F0D6E1FC5EB530054EDB5 /* Sources */,
 				785F0D6F1FC5EB530054EDB5 /* Frameworks */,
 				785F0D701FC5EB530054EDB5 /* Resources */,
+				93ECB54DDCCF86A23A93E12D /* [CP] Embed Pods Frameworks */,
+				DEE77B415B60966B74D6C2B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +296,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93ECB54DDCCF86A23A93E12D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DropTop/Pods-DropTop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C82AAB73D7EEC8E1EEBD31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DropTop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEE77B415B60966B74D6C2B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DropTop/Pods-DropTop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		785F0D6E1FC5EB530054EDB5 /* Sources */ = {
@@ -424,11 +518,13 @@
 		};
 		785F0D9B1FC5EB540054EDB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A03860950A9DF09E9248A4D /* Pods-DropTop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H94YHZ75GL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DropTop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirinpatel.DropTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +535,13 @@
 		};
 		785F0D9C1FC5EB540054EDB5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0729EA5ED2196948DD894138 /* Pods-DropTop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H94YHZ75GL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DropTop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirinpatel.DropTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
