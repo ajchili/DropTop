@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		785F0D761FC5EB530054EDB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D751FC5EB530054EDB5 /* AppDelegate.swift */; };
-		785F0D781FC5EB530054EDB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D771FC5EB530054EDB5 /* ViewController.swift */; };
-		785F0D7B1FC5EB530054EDB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785F0D791FC5EB530054EDB5 /* Main.storyboard */; };
 		785F0D7D1FC5EB530054EDB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785F0D7C1FC5EB530054EDB5 /* Assets.xcassets */; };
 		785F0D801FC5EB530054EDB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */; };
 		785F0D8B1FC5EB540054EDB5 /* DropTopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D8A1FC5EB540054EDB5 /* DropTopTests.swift */; };
 		785F0D961FC5EB540054EDB5 /* DropTopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D951FC5EB540054EDB5 /* DropTopUITests.swift */; };
+		78F3E2251FDF088C00CBBF1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */; };
+		78F3E2271FDF0AD600CBBF1F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F3E2261FDF0AD600CBBF1F /* Login.storyboard */; };
+		78F3E2291FDF0AF100CBBF1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */; };
+		78F3E22B1FDF100100CBBF1F /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F3E22A1FDF100100CBBF1F /* Register.storyboard */; };
+		78F3E22D1FDF102C00CBBF1F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3E22C1FDF102C00CBBF1F /* RegisterViewController.swift */; };
 		99E5706494A1DDAC974B7FD9 /* Pods_DropTop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC815E82B58D359BBF800267 /* Pods_DropTop.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +42,6 @@
 		5A03860950A9DF09E9248A4D /* Pods-DropTop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropTop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DropTop/Pods-DropTop.debug.xcconfig"; sourceTree = "<group>"; };
 		785F0D721FC5EB530054EDB5 /* DropTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785F0D751FC5EB530054EDB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		785F0D771FC5EB530054EDB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		785F0D7A1FC5EB530054EDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		785F0D7C1FC5EB530054EDB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		785F0D7F1FC5EB530054EDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		785F0D811FC5EB530054EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +51,11 @@
 		785F0D911FC5EB540054EDB5 /* DropTopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropTopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785F0D951FC5EB540054EDB5 /* DropTopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTopUITests.swift; sourceTree = "<group>"; };
 		785F0D971FC5EB540054EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78F3E2261FDF0AD600CBBF1F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		78F3E22A1FDF100100CBBF1F /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		78F3E22C1FDF102C00CBBF1F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CC815E82B58D359BBF800267 /* Pods_DropTop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DropTop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,8 +88,9 @@
 		05FCF4361FC5FEC200CCE64A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				785F0D791FC5EB530054EDB5 /* Main.storyboard */,
 				785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */,
+				78F3E2261FDF0AD600CBBF1F /* Login.storyboard */,
+				78F3E22A1FDF100100CBBF1F /* Register.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -91,7 +98,8 @@
 		05FCF4371FC5FED700CCE64A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				785F0D771FC5EB530054EDB5 /* ViewController.swift */,
+				78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */,
+				78F3E22C1FDF102C00CBBF1F /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 				05FCF4361FC5FEC200CCE64A /* Views */,
 				785F0D751FC5EB530054EDB5 /* AppDelegate.swift */,
 				785F0D7C1FC5EB530054EDB5 /* Assets.xcassets */,
+				78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */,
 				785F0D811FC5EB530054EDB5 /* Info.plist */,
 			);
 			path = DropTop;
@@ -277,7 +286,9 @@
 			files = (
 				785F0D801FC5EB530054EDB5 /* LaunchScreen.storyboard in Resources */,
 				785F0D7D1FC5EB530054EDB5 /* Assets.xcassets in Resources */,
-				785F0D7B1FC5EB530054EDB5 /* Main.storyboard in Resources */,
+				78F3E2271FDF0AD600CBBF1F /* Login.storyboard in Resources */,
+				78F3E2251FDF088C00CBBF1F /* GoogleService-Info.plist in Resources */,
+				78F3E22B1FDF100100CBBF1F /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,9 +315,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DropTop/Pods-DropTop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -353,7 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				785F0D781FC5EB530054EDB5 /* ViewController.swift in Sources */,
+				78F3E22D1FDF102C00CBBF1F /* RegisterViewController.swift in Sources */,
+				78F3E2291FDF0AF100CBBF1F /* LoginViewController.swift in Sources */,
 				785F0D761FC5EB530054EDB5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,14 +409,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		785F0D791FC5EB530054EDB5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				785F0D7A1FC5EB530054EDB5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -522,9 +533,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T4GLZ43QVM;
 				INFOPLIST_FILE = DropTop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirinpatel.DropTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -539,9 +550,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T4GLZ43QVM;
 				INFOPLIST_FILE = DropTop/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirinpatel.DropTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";

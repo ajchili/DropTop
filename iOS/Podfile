@@ -7,5 +7,7 @@ target 'DropTop' do
 
   # Pods for DropTop
 
+  pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  
 end
