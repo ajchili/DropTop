@@ -12,6 +12,13 @@
 		785F0D801FC5EB530054EDB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */; };
 		785F0D8B1FC5EB540054EDB5 /* DropTopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D8A1FC5EB540054EDB5 /* DropTopTests.swift */; };
 		785F0D961FC5EB540054EDB5 /* DropTopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D951FC5EB540054EDB5 /* DropTopUITests.swift */; };
+		78BF91531FE24EA8001B9221 /* DropTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF91521FE24EA8001B9221 /* DropTableViewController.swift */; };
+		78BF91551FE24EBC001B9221 /* DropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF91541FE24EBC001B9221 /* DropTableViewCell.swift */; };
+		78CA64A91FE158E7006C1C4D /* Drop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CA64A81FE158E7006C1C4D /* Drop.storyboard */; };
+		78CA64AC1FE15BE3006C1C4D /* Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA64AB1FE15BE3006C1C4D /* Drop.swift */; };
+		78CA64B01FE161A7006C1C4D /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA64AF1FE161A7006C1C4D /* TabViewController.swift */; };
+		78CA64B21FE16206006C1C4D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA64B11FE16206006C1C4D /* SettingsViewController.swift */; };
+		78CA64B41FE16346006C1C4D /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CA64B31FE16346006C1C4D /* AccountSettingsViewController.swift */; };
 		78F3E2251FDF088C00CBBF1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */; };
 		78F3E2271FDF0AD600CBBF1F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F3E2261FDF0AD600CBBF1F /* Login.storyboard */; };
 		78F3E2291FDF0AF100CBBF1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */; };
@@ -51,6 +58,14 @@
 		785F0D911FC5EB540054EDB5 /* DropTopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropTopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785F0D951FC5EB540054EDB5 /* DropTopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTopUITests.swift; sourceTree = "<group>"; };
 		785F0D971FC5EB540054EDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78BF91521FE24EA8001B9221 /* DropTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTableViewController.swift; sourceTree = "<group>"; };
+		78BF91541FE24EBC001B9221 /* DropTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTableViewCell.swift; sourceTree = "<group>"; };
+		78CA64A51FE15891006C1C4D /* DropTop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DropTop.entitlements; sourceTree = "<group>"; };
+		78CA64A81FE158E7006C1C4D /* Drop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drop.storyboard; sourceTree = "<group>"; };
+		78CA64AB1FE15BE3006C1C4D /* Drop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drop.swift; sourceTree = "<group>"; };
+		78CA64AF1FE161A7006C1C4D /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		78CA64B11FE16206006C1C4D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		78CA64B31FE16346006C1C4D /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78F3E2261FDF0AD600CBBF1F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +106,7 @@
 				785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */,
 				78F3E2261FDF0AD600CBBF1F /* Login.storyboard */,
 				78F3E22A1FDF100100CBBF1F /* Register.storyboard */,
+				78CA64A81FE158E7006C1C4D /* Drop.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -100,6 +116,10 @@
 			children = (
 				78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */,
 				78F3E22C1FDF102C00CBBF1F /* RegisterViewController.swift */,
+				78CA64AF1FE161A7006C1C4D /* TabViewController.swift */,
+				78CA64B11FE16206006C1C4D /* SettingsViewController.swift */,
+				78CA64B31FE16346006C1C4D /* AccountSettingsViewController.swift */,
+				78BF91521FE24EA8001B9221 /* DropTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,8 +159,10 @@
 			children = (
 				05FCF4371FC5FED700CCE64A /* Controllers */,
 				05FCF4361FC5FEC200CCE64A /* Views */,
+				78CA64AA1FE15BD3006C1C4D /* Utils */,
 				785F0D751FC5EB530054EDB5 /* AppDelegate.swift */,
 				785F0D7C1FC5EB530054EDB5 /* Assets.xcassets */,
+				78CA64A51FE15891006C1C4D /* DropTop.entitlements */,
 				78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */,
 				785F0D811FC5EB530054EDB5 /* Info.plist */,
 			);
@@ -163,6 +185,15 @@
 				785F0D971FC5EB540054EDB5 /* Info.plist */,
 			);
 			path = DropTopUITests;
+			sourceTree = "<group>";
+		};
+		78CA64AA1FE15BD3006C1C4D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				78CA64AB1FE15BE3006C1C4D /* Drop.swift */,
+				78BF91541FE24EBC001B9221 /* DropTableViewCell.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C209D76846D1B4308FB40C29 /* Pods */ = {
@@ -246,6 +277,11 @@
 					785F0D711FC5EB530054EDB5 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					785F0D851FC5EB540054EDB5 = {
 						CreatedOnToolsVersion = 9.1;
@@ -285,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				785F0D801FC5EB530054EDB5 /* LaunchScreen.storyboard in Resources */,
+				78CA64A91FE158E7006C1C4D /* Drop.storyboard in Resources */,
 				785F0D7D1FC5EB530054EDB5 /* Assets.xcassets in Resources */,
 				78F3E2271FDF0AD600CBBF1F /* Login.storyboard in Resources */,
 				78F3E2251FDF088C00CBBF1F /* GoogleService-Info.plist in Resources */,
@@ -316,14 +353,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DropTop/Pods-DropTop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +416,13 @@
 			files = (
 				78F3E22D1FDF102C00CBBF1F /* RegisterViewController.swift in Sources */,
 				78F3E2291FDF0AF100CBBF1F /* LoginViewController.swift in Sources */,
+				78CA64AC1FE15BE3006C1C4D /* Drop.swift in Sources */,
+				78CA64B01FE161A7006C1C4D /* TabViewController.swift in Sources */,
 				785F0D761FC5EB530054EDB5 /* AppDelegate.swift in Sources */,
+				78BF91531FE24EA8001B9221 /* DropTableViewController.swift in Sources */,
+				78BF91551FE24EBC001B9221 /* DropTableViewCell.swift in Sources */,
+				78CA64B41FE16346006C1C4D /* AccountSettingsViewController.swift in Sources */,
+				78CA64B21FE16206006C1C4D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +581,7 @@
 			baseConfigurationReference = 5A03860950A9DF09E9248A4D /* Pods-DropTop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DropTop/DropTop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4GLZ43QVM;
 				INFOPLIST_FILE = DropTop/Info.plist;
@@ -549,6 +599,7 @@
 			baseConfigurationReference = 0729EA5ED2196948DD894138 /* Pods-DropTop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DropTop/DropTop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4GLZ43QVM;
 				INFOPLIST_FILE = DropTop/Info.plist;

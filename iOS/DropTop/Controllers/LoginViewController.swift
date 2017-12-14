@@ -23,7 +23,15 @@ class LoginViewController: UIViewController {
         handler = Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil {
                 if (user?.isEmailVerified)! {
+                    if self.emailAddress.text!.count == 0 {
+                        self.emailAddress.text = user?.email
+                        self.rememberMe.isOn = true
+                    }
+                    
                     AppDelegate.rememberMe = self.rememberMe.isOn
+                    
+                    let storyboard = UIStoryboard(name: "Drop", bundle: nil)
+                    self.present(storyboard.instantiateInitialViewController()!, animated: true, completion: nil)
                 } else {
                     let alert = UIAlertController(title: "Your email address has not been verified!", message: "Please complete your registration by verifying your email address.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
@@ -42,6 +50,10 @@ class LoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         Auth.auth().removeStateDidChangeListener(handler!)
+        
+        emailAddress.text! = ""
+        password.text! = ""
+        rememberMe.isOn = false
     }
 
     @IBAction func loginTouchUpInside(_ sender: Any) {

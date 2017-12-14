@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func signOut() {
-        if !rememberMe {
+        if !AppDelegate.rememberMe {
             do {
                 try Auth.auth().signOut()
             } catch let signOutError as NSError {
