@@ -9,6 +9,13 @@ class SettingsViewController: UIViewController {
         button.addTarget(self, action: #selector(handleViewAccount), for: .touchUpInside)
         return button
     }()
+    
+    let feedback: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Send Feedback", for: .normal)
+        button.addTarget(self, action: #selector(handleFeedback), for: .touchUpInside)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +36,7 @@ class SettingsViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = title
         let logout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         navigationController?.navigationBar.topItem?.leftBarButtonItem = logout
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = nil
     }
     
     @objc func handleLogout() {
@@ -43,8 +51,15 @@ class SettingsViewController: UIViewController {
         navigationController?.pushViewController(AccountSettingsViewController(), animated: true)
     }
     
+    @objc func handleFeedback() {
+        navigationController?.pushViewController(FeedbackViewController(), animated: true)
+    }
+    
     fileprivate func setupView() {
         view.addSubview(accountSettings)
         accountSettings.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, paddingTop: 8, paddingLeft: 24, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        
+        view.addSubview(feedback)
+        feedback.anchor(top: accountSettings.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, paddingTop: 8, paddingLeft: 24, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
     }
 }

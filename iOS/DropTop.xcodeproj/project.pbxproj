@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7847DAA8202FBC460046D886 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7847DAA7202FBC460046D886 /* AccountSettingsViewController.swift */; };
+		7847DAAC202FC64D0046D886 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7847DAAB202FC64D0046D886 /* FeedbackViewController.swift */; };
 		785D38E620291F0400538D36 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D38E520291F0400538D36 /* Extensions.swift */; };
 		785F0D761FC5EB530054EDB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F0D751FC5EB530054EDB5 /* AppDelegate.swift */; };
 		785F0D7D1FC5EB530054EDB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785F0D7C1FC5EB530054EDB5 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		0729EA5ED2196948DD894138 /* Pods-DropTop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropTop.release.xcconfig"; path = "Pods/Target Support Files/Pods-DropTop/Pods-DropTop.release.xcconfig"; sourceTree = "<group>"; };
 		5A03860950A9DF09E9248A4D /* Pods-DropTop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropTop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DropTop/Pods-DropTop.debug.xcconfig"; sourceTree = "<group>"; };
 		7847DAA7202FBC460046D886 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		7847DAAB202FC64D0046D886 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		785D38E520291F0400538D36 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		785F0D721FC5EB530054EDB5 /* DropTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785F0D751FC5EB530054EDB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				78E0BD02202FB0B400A8389E /* DropViewController.swift */,
 				78E0BD00202FAAF900A8389E /* SettingsViewController.swift */,
 				7847DAA7202FBC460046D886 /* AccountSettingsViewController.swift */,
+				7847DAAB202FC64D0046D886 /* FeedbackViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				78E0BCFF202FA7B400A8389E /* NavigationViewController.swift in Sources */,
 				78F3E2291FDF0AF100CBBF1F /* LoginViewController.swift in Sources */,
 				78E0BD03202FB0B400A8389E /* DropViewController.swift in Sources */,
+				7847DAAC202FC64D0046D886 /* FeedbackViewController.swift in Sources */,
 				78CA64AC1FE15BE3006C1C4D /* Drop.swift in Sources */,
 				78CA64B01FE161A7006C1C4D /* TabViewController.swift in Sources */,
 				785F0D761FC5EB530054EDB5 /* AppDelegate.swift in Sources */,
