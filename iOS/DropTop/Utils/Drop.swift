@@ -1,11 +1,3 @@
-//
-//  Drop.swift
-//  DropTop
-//
-//  Created by Kirin Patel on 12/13/17.
-//  Copyright © 2017 Kirin Patel. All rights reserved.
-//
-
 import Foundation
 
 class Drop: NSObject {

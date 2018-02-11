@@ -1,23 +1,37 @@
-//
-//  SettingsViewController.swift
-//  DropTop
-//
-//  Created by Kirin Patel on 12/13/17.
-//  Copyright © 2017 Kirin Patel. All rights reserved.
-//
-
 import UIKit
 import FirebaseAuth
 
 class SettingsViewController: UIViewController {
-
-    @IBOutlet var rememberMe: UISwitch!
     
-    override func viewWillAppear(_ animated: Bool) {
-         rememberMe.isOn = AppDelegate.rememberMe
+    let accountSettings: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Account Settings", for: .normal)
+        button.addTarget(self, action: #selector(handleViewAccount), for: .touchUpInside)
+        return button
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "Settings"
+        setupView()
     }
     
-    @IBAction func logoutTouchIUpInside(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.navigationBar.topItem?.title = title
+        let logout = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = logout
+    }
+    
+    @objc func handleLogout() {
         do {
             try Auth.auth().signOut()
         } catch let signOutError as NSError {
@@ -25,7 +39,12 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    @IBAction func rememberMeValueChanged(_ sender: Any) {
-        AppDelegate.rememberMe = rememberMe.isOn
+    @objc func handleViewAccount() {
+        navigationController?.pushViewController(AccountSettingsViewController(), animated: true)
+    }
+    
+    fileprivate func setupView() {
+        view.addSubview(accountSettings)
+        accountSettings.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.safeAreaLayoutGuide.leftAnchor, bottom: nil, right: nil, paddingTop: 8, paddingLeft: 24, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
     }
 }

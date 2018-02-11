@@ -1,31 +1,27 @@
-//
-//  TabViewController.swift
-//  DropTop
-//
-//  Created by Kirin Patel on 12/13/17.
-//  Copyright © 2017 Kirin Patel. All rights reserved.
-//
-
 import UIKit
-import FirebaseAuth
 
-class TabViewController: UITabBarController {
+class TabViewController: UITabBarController, UITabBarControllerDelegate {
     
-    var handler: AuthStateDidChangeListenerHandle!
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        delegate = self
         
-        handler = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user == nil {
-                self.navigationController?.popViewController(animated: true)
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
+        loadTabs()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        Auth.auth().removeStateDidChangeListener(handler!)
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        return true;
+    }
+    
+    fileprivate func loadTabs() {
+        let dropTab = DropViewController()
+        dropTab.tabBarItem = UITabBarItem(title: "Drops", image: nil, selectedImage: nil)
+        
+        let settingsTab = SettingsViewController()
+        settingsTab.tabBarItem = UITabBarItem(title: "Settings", image: nil, selectedImage: nil)
+        
+        let tabs = [ dropTab, settingsTab ]
+        viewControllers = tabs
+        selectedIndex = 0
     }
 }
