@@ -53,17 +53,20 @@ class AccountSettingsViewController: UIViewController, UITextFieldDelegate {
         ref = Database.database().reference()
 
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         loadUser()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = displayName.text!
-        changeRequest?.commitChanges { (error) in
-            
-        }
+        let user = Auth.auth().currentUser
+        let name = displayName.text!
+        ref.child("users").child((user?.uid)!).setValue([ "displayName": name ])
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -92,7 +95,10 @@ class AccountSettingsViewController: UIViewController, UITextFieldDelegate {
     fileprivate func loadUser() {
         let user = Auth.auth().currentUser
         
-        displayName.text = user?.displayName!
+        ref.child("users").child((user?.uid)!).child("displayName").observeSingleEvent(of: .value, with: { (snapshot) in
+            self.displayName.text = snapshot.value as? String ?? ""
+        })
+        
         ref.child("users").child((user?.uid)!).child("type").observeSingleEvent(of: .value, with: { (snapshot) in
             self.accountType.text = snapshot.value as? String ?? "Basic"
         })

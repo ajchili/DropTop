@@ -2,9 +2,11 @@ import Foundation
 
 class Drop: NSObject {
     
-    enum type {
-        case link
-        case file
+    enum type : Int {
+        case text = 0
+        case link = 1
+        case image = 2
+        case file = 3
     }
     
     var key: String?

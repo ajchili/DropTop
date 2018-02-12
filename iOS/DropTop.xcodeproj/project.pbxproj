@@ -20,6 +20,8 @@
 		78E0BCFF202FA7B400A8389E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0BCFE202FA7B400A8389E /* NavigationViewController.swift */; };
 		78E0BD01202FAAF900A8389E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0BD00202FAAF900A8389E /* SettingsViewController.swift */; };
 		78E0BD03202FB0B400A8389E /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0BD02202FB0B400A8389E /* DropViewController.swift */; };
+		78E3C2D52030B20D00C1C78E /* DropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3C2D32030B20D00C1C78E /* DropTableViewCell.swift */; };
+		78E3C2D62030B20D00C1C78E /* DropTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C2D42030B20D00C1C78E /* DropTableViewCell.xib */; };
 		78F3E2251FDF088C00CBBF1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */; };
 		78F3E2271FDF0AD600CBBF1F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F3E2261FDF0AD600CBBF1F /* Login.storyboard */; };
 		78F3E2291FDF0AF100CBBF1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */; };
@@ -66,6 +68,8 @@
 		78E0BCFE202FA7B400A8389E /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		78E0BD00202FAAF900A8389E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		78E0BD02202FB0B400A8389E /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
+		78E3C2D32030B20D00C1C78E /* DropTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropTableViewCell.swift; sourceTree = "<group>"; };
+		78E3C2D42030B20D00C1C78E /* DropTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropTableViewCell.xib; sourceTree = "<group>"; };
 		78F3E2241FDF088C00CBBF1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78F3E2261FDF0AD600CBBF1F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		78F3E2281FDF0AF100CBBF1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			children = (
 				785F0D7E1FC5EB530054EDB5 /* LaunchScreen.storyboard */,
 				78F3E2261FDF0AD600CBBF1F /* Login.storyboard */,
+				78E3C2D42030B20D00C1C78E /* DropTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			children = (
 				78CA64AB1FE15BE3006C1C4D /* Drop.swift */,
 				785D38E520291F0400538D36 /* Extensions.swift */,
+				78E3C2D32030B20D00C1C78E /* DropTableViewCell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				785F0D801FC5EB530054EDB5 /* LaunchScreen.storyboard in Resources */,
 				785F0D7D1FC5EB530054EDB5 /* Assets.xcassets in Resources */,
 				78F3E2271FDF0AD600CBBF1F /* Login.storyboard in Resources */,
+				78E3C2D62030B20D00C1C78E /* DropTableViewCell.xib in Resources */,
 				78F3E2251FDF088C00CBBF1F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E3C2D52030B20D00C1C78E /* DropTableViewCell.swift in Sources */,
 				78E0BCFF202FA7B400A8389E /* NavigationViewController.swift in Sources */,
 				78F3E2291FDF0AF100CBBF1F /* LoginViewController.swift in Sources */,
 				78E0BD03202FB0B400A8389E /* DropViewController.swift in Sources */,
