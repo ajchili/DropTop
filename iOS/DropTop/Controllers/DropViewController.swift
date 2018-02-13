@@ -77,10 +77,12 @@ class DropViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let drop = drops[indexPath.row]
         
-        let copy = UITableViewRowAction(style: .normal, title: "Copy") { action, index in
-            
+        let share = UITableViewRowAction(style: .normal, title: "Share") { action, index in
+            let shareContent:String = drop.data!
+            let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: {})
         }
-        copy.backgroundColor = .blue
+        share.backgroundColor = .blue
         
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             let alert = UIAlertController(title: "Delete Drop", message: "Are you sure you want to delete this drop?", preferredStyle: .alert)
@@ -93,7 +95,7 @@ class DropViewController: UITableViewController {
         }
         delete.backgroundColor = .red
         
-        return [ delete, copy ]
+        return [ delete, share ]
     }
     
     @objc func handleAdd() {
