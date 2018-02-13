@@ -66,7 +66,7 @@ class AccountSettingsViewController: UIViewController, UITextFieldDelegate {
         
         let user = Auth.auth().currentUser
         let name = displayName.text!
-        ref.child("users").child((user?.uid)!).setValue([ "displayName": name ])
+        ref.child("users").child((user?.uid)!).child("displayName").setValue(name)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

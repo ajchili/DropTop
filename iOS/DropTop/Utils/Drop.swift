@@ -11,15 +11,17 @@ class Drop: NSObject {
     
     var key: String?
     var title: String?
+    var data: String?
     var type: Drop.type?
     
-    init?(key: String, title: String, type: Drop.type) {
-        guard !key.isEmpty || !title.isEmpty else {
+    init?(key: String, title: String, data: String, type: Drop.type) {
+        guard !key.isEmpty || !data.isEmpty || !title.isEmpty else {
             return nil
         }
         
         self.key = key
         self.title = title
+        self.data = data
         self.type = type
     }
 }

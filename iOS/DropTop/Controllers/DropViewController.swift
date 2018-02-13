@@ -48,17 +48,52 @@ class DropViewController: UITableViewController {
         
         cell.drop = drop
         cell.title.text = drop.title
-        cell.type.text = String(describing: drop.type?.rawValue)
+        var type: String = ""
+        
+        switch drop.type?.rawValue {
+        case Drop.type.text.rawValue?:
+            type = "Text"
+            break;
+        case Drop.type.link.rawValue?:
+            type = "Link"
+            break;
+        case .none:
+            break;
+        case .some(_):
+            type = "Other"
+            break;
+        }
+        
+        cell.type.text = type
+        cell.data.text = drop.data
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return false
+        return true
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.rowHeight
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let drop = drops[indexPath.row]
+        
+        let copy = UITableViewRowAction(style: .normal, title: "Copy") { action, index in
+            
+        }
+        copy.backgroundColor = .blue
+        
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            let alert = UIAlertController(title: "Delete Drop", message: "Are you sure you want to delete this drop?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Delete", style: UIAlertActionStyle.default, handler: {
+                (_) in
+                self.ref.child("users").child(self.user.uid).child("drops").child(drop.key!).removeValue()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        delete.backgroundColor = .red
+        
+        return [ delete, copy ]
     }
     
     @objc func handleAdd() {
@@ -84,8 +119,7 @@ class DropViewController: UITableViewController {
         tableView.estimatedRowHeight = 140.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        let nib = UINib(nibName: cellIdentifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(DropTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
     fileprivate func addDrop(type: Drop.type) {
@@ -103,7 +137,20 @@ class DropViewController: UITableViewController {
                 let message: String = alert.textFields?[0].text ?? ""
                 
                 if message.count > 0 {
-                    self.ref.child("users").child(self.user.uid).child("drops").child(key).setValue([ "type": type.rawValue, "data": message ])
+                    let extraAlert = UIAlertController(title: "Title", message: "Please enter a title of your message", preferredStyle: .alert)
+                    extraAlert.addTextField { (textField) -> Void in
+                        textField.placeholder = "Title"
+                    }
+                    extraAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+                    extraAlert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: {
+                        (_) in
+                        let title: String = extraAlert.textFields?[0].text ?? ""
+                        
+                        if title.count > 0 {
+                            self.ref.child("users").child(self.user.uid).child("drops").child(key).setValue([ "data": message, "title": title, "type": type.rawValue ])
+                        }
+                    }))
+                    self.present(extraAlert, animated: true, completion: nil)
                 }
             }))
             self.present(alert, animated: true, completion: nil)
@@ -120,7 +167,20 @@ class DropViewController: UITableViewController {
                 let link: String = alert.textFields?[0].text ?? ""
                 
                 if link.count > 0 {
-                    self.ref.child("users").child(self.user.uid).child("drops").child(key).setValue([ "type": type.rawValue, "data": link ])
+                    let extraAlert = UIAlertController(title: "Title", message: "Please enter a title of your link", preferredStyle: .alert)
+                    extraAlert.addTextField { (textField) -> Void in
+                        textField.placeholder = "Title"
+                    }
+                    extraAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+                    extraAlert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: {
+                        (_) in
+                        let title: String = extraAlert.textFields?[0].text ?? ""
+                        
+                        if title.count > 0 {
+                            self.ref.child("users").child(self.user.uid).child("drops").child(key).setValue([ "data": link, "title": title, "type": type.rawValue ])
+                        }
+                    }))
+                    self.present(extraAlert, animated: true, completion: nil)
                 }
             }))
             self.present(alert, animated: true, completion: nil)
@@ -142,10 +202,11 @@ class DropViewController: UITableViewController {
                 let childSnapshot = child as! DataSnapshot
                 
                 let key = childSnapshot.key
-                let title = childSnapshot.childSnapshot(forPath: "data").value as! String
+                let title = childSnapshot.childSnapshot(forPath: "title").value as! String
+                let data = childSnapshot.childSnapshot(forPath: "data").value as! String
                 let type = Drop.type(rawValue: childSnapshot.childSnapshot(forPath: "type").value as! Int)!
                 
-                let drop = Drop(key: key, title: title, type: type)
+                let drop = Drop(key: key, title: title, data: data, type: type)
                 
                 self.drops.append(drop!)
             }
